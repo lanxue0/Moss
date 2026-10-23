@@ -1,0 +1,67 @@
+{
+  "_doc": [
+    "digest.py 的配置。全部有默认值，不建这个文件也能跑。",
+    "search_roots 越大扫描越慢，只填真正放代码的目录。",
+    "classify.groups 按关键词把仓库归到「工作 / 个人」等类别，先匹配先得；",
+    "拿不准就在 overrides 里按完整路径指定。"
+  ],
+  "git": {
+    "search_roots": [
+      "D:\\yzj"
+    ],
+    "max_depth": 4,
+    "exclude": [
+      "labbol工作日志"
+    ],
+    "author_emails": [
+      "1259700509@qq.com"
+    ],
+    "only_mine": true,
+    "skip_merge": true
+  },
+  "classify": {
+    "groups": [
+      {
+        "name": "工作",
+        "emoji": "🏢",
+        "keywords": [
+          "labbol",
+          "mentor",
+          "dcc",
+          "digitalemployee",
+          "digital-employee",
+          "portal",
+          "product-yun",
+          "apicurio",
+          "materia",
+          "knowledge-view"
+        ]
+      },
+      {
+        "name": "个人",
+        "emoji": "🧪",
+        "keywords": [
+          "mastra",
+          "xiaole",
+          "test-",
+          "demo",
+          "play"
+        ]
+      }
+    ],
+    "overrides": {},
+    "default_group": {
+      "name": "其他",
+      "emoji": "📦"
+    }
+  },
+  "output": {
+    "dir": "out/digest",
+    "filename": "{date}.md",
+    "repo": "",
+    "subdir": "digest",
+    "commit": false,
+    "push": false,
+    "commit_message": "docs: digest {date}"
+  }
+}

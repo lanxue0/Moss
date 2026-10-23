@@ -1,0 +1,19 @@
+# 运行时数据（只对本机有意义，不入库）
+scripts/data/
+scripts/out/
+scripts/reports/
+scripts/*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器与系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

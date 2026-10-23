@@ -1,0 +1,50 @@
+{
+  "_doc": {
+    "git.search_roots": "在哪几个目录下找 git 仓库（--init 扫描）",
+    "git.exclude": "排除的仓库目录名",
+    "git.author_emails": "只统计这些作者的提交；留空则用 git config user.email",
+    "output.repo": "日志仓库本地路径；留空则只写到 companion/out/",
+    "output.path_template": "支持 {year} {month} {date} {mon} {sun} {week}",
+    "output.update_index": "是否自动维护月度 README.md 索引表",
+    "model.base_url": "任何 OpenAI 兼容端点",
+    "model.api_key_env": "从环境变量读 key（推荐）",
+    "rules.skip_weekends": "周末不生成",
+    "rules.min_minutes": "零提交且使用时间低于此值时跳过，不制造垃圾提交",
+    "rules.sanitize": "抹掉本地绝对路径与疑似密钥",
+    "full.max_diff_chars": "full 模式下每个提交最多带多少字符 diff"
+  },
+  "git": {
+    "search_roots": [
+      "D:\\yzj"
+    ],
+    "max_depth": 3,
+    "exclude": [
+      "labbol工作日志"
+    ],
+    "author_emails": [
+      "1259700509@qq.com"
+    ]
+  },
+  "output": {
+    "repo": "D:/yzj/labbol工作日志",
+    "path_template": "{year}/{month}/Week_{mon}-{sun}/{date}-工作日志.md",
+    "commit_message": "docs: add {date} work log",
+    "update_index": true,
+    "push": true,
+    "remote": "origin"
+  },
+  "model": {
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-chat",
+    "api_key_env": "COMPANION_API_KEY",
+    "temperature": 0.3
+  },
+  "rules": {
+    "skip_weekends": false,
+    "min_minutes": 20,
+    "sanitize": true
+  },
+  "full": {
+    "max_diff_chars": 6000
+  }
+}
